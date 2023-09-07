@@ -1,6 +1,6 @@
-export const runtime = 'edge'
-export const preferredRegion = 'icn1'
-
+export const config = {
+  regions: 'icn1',
+}
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
 
 import { appRouter } from '@/lib/server/routers/_app'
