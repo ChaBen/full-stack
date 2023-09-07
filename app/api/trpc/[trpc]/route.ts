@@ -1,6 +1,3 @@
-export const config = {
-  regions: 'icn1',
-}
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
 
 import { appRouter } from '@/lib/server/routers/_app'
