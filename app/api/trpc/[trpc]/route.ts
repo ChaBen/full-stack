@@ -1,14 +1,18 @@
-import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
+export const runtime = 'edge'
+export const preferredRegion = 'icn1'
+export const dynamic = 'force-dynamic'
 
-import { appRouter } from "@/lib/server/routers/_app";
-import { createContext } from "@/lib/trpc/context";
+import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
+
+import { appRouter } from '@/lib/server/routers/_app'
+import { createContext } from '@/lib/trpc/context'
 
 const handler = (req: Request) =>
   fetchRequestHandler({
-    endpoint: "/api/trpc",
+    endpoint: '/api/trpc',
     req,
     router: appRouter,
     createContext,
-  });
+  })
 
-export { handler as GET, handler as POST };
+export { handler as GET, handler as POST }
