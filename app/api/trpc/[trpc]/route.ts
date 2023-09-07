@@ -1,3 +1,4 @@
+export const runtime = 'edge'
 export const preferredRegion = 'icn1'
 
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
