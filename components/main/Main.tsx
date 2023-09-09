@@ -19,9 +19,11 @@ function Main() {
       {isGetComputers ? (
         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
       ) : null}
-      {computers?.computers.map((computer) => (
+      {computers?.computers.map((computer, index) => (
         <div key={computer.id}>
-          <h1>{computer.brand}</h1>
+          <h1>
+            {index + 1}: {computer.brand}
+          </h1>
         </div>
       ))}
       <Button
