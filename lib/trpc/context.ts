@@ -1,8 +1,6 @@
 import { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch'
 import { getUserAuth } from '../auth/utils'
 
-export const runtime = 'edge'
-
 export async function createContext(opts?: FetchCreateContextFnOptions) {
   const { session } = await getUserAuth()
 
