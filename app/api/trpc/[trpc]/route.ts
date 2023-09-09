@@ -1,3 +1,7 @@
+export const config = {
+  runtime: 'edge',
+}
+
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
 
 import { appRouter } from '@/lib/server/routers/_app'
