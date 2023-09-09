@@ -2,6 +2,7 @@
 
 import { trpc } from '@/lib/trpc/client'
 import { Button } from '../ui/button'
+import { Loader2 } from 'lucide-react'
 
 function Main() {
   const utils = trpc.useContext()
@@ -14,8 +15,10 @@ function Main() {
       },
     })
   return (
-    <div>
-      {isGetComputers ? 'loading' : null}
+    <div className="mx-auto">
+      {isGetComputers ? (
+        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      ) : null}
       {computers?.computers.map((computer) => (
         <div key={computer.id}>
           <h1>{computer.brand}</h1>
