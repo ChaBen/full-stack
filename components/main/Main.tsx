@@ -26,6 +26,8 @@ function Main() {
           </h1>
         </div>
       ))}
+      <div></div>
+      <div></div>
       <Button
         onClick={() =>
           createComputer({
